@@ -1,0 +1,103 @@
+<view class="nav-box">
+    <navigator>吃豆</navigator>
+    <view class="right">
+        <navigator>电影</navigator>
+        <navigator>图书</navigator>
+        <navigator>广播</navigator>
+        <navigator>小组</navigator>
+        <navigator url="/pages/search/search">
+            <icon type="search" color="#05b512" size="20" />
+        </navigator>
+    </view>
+</view>
+<view class="content">
+    <view class="titel">{{movieInfo.title}}</view>
+    <view class="movie">
+        <view class="left">
+            <view class="topp">
+                <view class="star-box">
+                    <block wx:for="{{movieInfo.arr}}">
+                        <image wx:if="{{item==1}}" src="../../img/full.png"></image>
+                        <image wx:elif="{{item==2}}" src="../../img/halfstar.png"></image>
+                        <image wx:else src="../../img/empty.png"></image>
+                    </block>
+                </view>
+                <text class="average">{{movieInfo.rating.average}}</text>
+                <text class="count">{{movieInfo.ratings_count}}人评价</text>
+            </view>
+            <view class="bottom">
+                <text>
+                    {{movieInfo.durations}} /
+                    <block wx:for="{{movieInfo.genres}}">{{item}} /</block>
+                    {{movieInfo.writers.name}} /
+                    <block wx:for="{{movieInfo.casts}}">{{item.name}} /</block>
+                    <block wx:for="{{movieInfo.pubdates}}">{{item}}</block>
+                    上映
+                </text>
+            </view>
+        </view>
+        <view class="right">
+            <image src="{{movieInfo.images.small}}" />
+        </view>
+    </view>
+    <view class="watch">
+        <view>想看</view>
+        <view>看过</view>
+    </view>
+    <view class="channel">
+        <view class="title">所属频道</view>
+        <view class="list">
+            <view class="channel-box" wx:for="{{movieInfo.tags}}">{{item}}  ></view>
+        </view>
+    </view>
+    <view class="story">
+        <view class="title">{{movieInfo.title}}的剧情简介</view>
+        <view class="story-box">
+            <text>{{storyCat}}</text>
+            <text class="more" bindtap="more" wx:if="{{storyCat.length<=68}}">(展开)</text>
+            <text class="cat" bindtap="cat" wx:if="{{storyCat.length>68}}">(收回)</text>
+        </view>
+    </view>
+    <view class="worker">
+        <viwe class="title">影人</viwe>
+        <scroll-view class="worker-box" scroll-x>
+            <view>
+                <image src="{{movieInfo.writers[0].avatars.small}}" />
+                <text class="name">{{movieInfo.writers[0].name}}</text>
+                <text class="job">导演</text>
+            </view>
+            <view wx:for="{{movieInfo.casts}}">
+                <image src="{{item.avatars.small}}" />
+                <text class="name">{{item.name}}</text>
+                <text class="job">演员</text>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="trailers">
+        <view class="title">
+            {{movieInfo.title}}的预告片({{movieInfo.trailers.length}})、视频评论(1)、和图片({{movieInfo.photos_count}})
+        </view>
+        <scroll-view class="trailers-box" scroll-x>
+            <image src="{{item.small}}" wx:for="{{movieInfo.trailers}}" />
+        </scroll-view>
+    </view>
+    <view class="comments">
+        <view class="title">{{movieInfo.title}}的短评({{movieInfo.comments_count}})</view>
+        <view wx:for="{{movieInfo.popular_comments}}" class="comments-box">
+            <view class="left">
+                <image src="{{item.author.avatar}}" />
+            </view>
+            <view class="right">
+                <view class="top">
+                    <text class="name">{{item.author.name}}</text>
+                    <view class="star-box">
+                        <image wx:for="{{item.rating.value}}" src="../../img/full.png"></image>
+                        <image wx:for="{{5-item.rating.value}}" src="../../img/empty.png"></image>
+                    </view>
+                </view>
+                <text class="time">{{item.created_at}}</text>
+                <view class="content">{{item.content}}</view>
+            </view>
+        </view>
+    </view>
+</view>

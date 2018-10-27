@@ -1,0 +1,32 @@
+<view class="search-top">
+    <navigator class="close" url="/pages/index/index">关闭</navigator>
+    <input class="search" type="text" confirm-type="done" bindconfirm="search" />
+    <icon type="search" />
+</view>
+<view class="search-box" wx:if="{{searchList.length==0}}">
+    <view class="search-item" wx:for="{{titleList}}">
+        <view style="color:{{item.color}}" class="title">{{item.title}}</view>
+        <view class="subtitle">{{item.subtitle}}</view>
+    </view>
+</view>
+<view wx:else class="search-content">
+    <navigator url="/pages/detail/detail?id={{item.id}}" class="search-resultItem" wx:for="{{searchList}}">
+        <view class="left">
+            <image src="{{item.images.small}}" alt="" />
+        </view>
+        <view class="right">
+            <view class="title">{{item.title}}</view>
+            <text wx:if="{{item.rating.average==0}}">暂无评分</text>
+            <view wx:else>
+                <view class="star-box">
+                    <block wx:for="{{item.arr}}">
+                        <image wx:if="{{item==1}}" src="../../img/full.png"></image>
+                        <image wx:elif="{{item==2}}" src="../../img/halfstar.png"></image>
+                        <image wx:else src="../../img/empty.png"></image>
+                    </block>
+                    <text class="average">{{item.rating.average}}</text>
+                </view>
+            </view>
+        </view>
+    </navigator>
+</view>

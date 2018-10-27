@@ -1,0 +1,27 @@
+<view class="nav-box">
+    <navigator>吃豆</navigator>
+    <view class="right">
+        <navigator>电影</navigator>
+        <navigator>图书</navigator>
+        <navigator>广播</navigator>
+        <navigator>小组</navigator>
+         <navigator url="/pages/search/search">
+            <icon type="search" color="#05b512" size="20" />
+        </navigator>
+    </view>
+</view>
+<view class="movie">
+    <viwe class="section-title">{{title}}</viwe>
+    <navigator class="item" wx:for="{{movieList}}" wx:key="{{item.id}}" url="/pages/detail/detail?id={{item.id}}">
+        <image src="{{item.images.small}}" />
+        <text class="titel">{{item.title}}</text>
+        <text wx:if="{{item.rating.average==0}}">暂无评分</text>
+        <view wx:else>
+            <block wx:for="{{item.rating.starList}}" wx:for-item="sItem">
+                <text class="red" wx:if="{{sItem>0}}">★</text>
+                <text class="grey" wx:else>★</text>
+            </block>
+            <text>{{item.rating.average}}</text>
+        </view>
+    </navigator>
+</view>

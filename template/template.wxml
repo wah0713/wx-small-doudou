@@ -1,0 +1,14 @@
+<template name="header">
+    <view class="nav-box">
+        <navigator>吃豆</navigator>
+        <view class="right">
+            <navigator>电影</navigator>
+            <navigator>图书</navigator>
+            <navigator>广播</navigator>
+            <navigator>小组</navigator>
+            <navigator url="/pages/search/search">
+                <icon type="search" color="#05b512" size="20" />
+            </navigator>
+        </view>
+    </view>
+</template>

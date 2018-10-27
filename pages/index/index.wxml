@@ -1,0 +1,62 @@
+<import src="../../template/template.wxml"/>
+<template is="header" />
+<view class="section">
+  <view class="top">
+    <view class="title">影院热映</view>
+    <navigator url="/pages/list/list?tag=in_theaters">更多</navigator>
+  </view>
+  <scroll-view scroll-x>
+    <navigator class="item" url="/pages/detail/detail?id={{item.id}}" wx:for="{{hotmovie}}" wx:key="{{item.id}}">
+      <image src="{{item.images.small}}" />
+      <text class="titel">{{item.title}}</text>
+      <text wx:if="{{item.rating.average==0}}">暂无评分</text>
+      <view wx:else>
+        <block wx:for="{{item.rating.starList}}" wx:for-item="sItem">
+          <text class="red" wx:if="{{sItem>0}}">★</text>
+          <text class="grey" wx:else>★</text>
+        </block>
+        <text>{{item.rating.average}}</text>
+      </view>
+    </navigator>
+  </scroll-view>
+</view>
+<view class="section">
+  <view class="top">
+    <view class="title">即将上映</view>
+    <navigator url="/pages/list/list?tag=coming_soon">更多</navigator>
+  </view>
+  <scroll-view scroll-x>
+    <navigator class="item" url="/pages/detail/detail?id={{item.id}}" wx:for="{{comingmovie}}" wx:key="{{item.id}}">
+      <image src="{{item.images.small}}" />
+      <text class="titel">{{item.title}}</text>
+      <text wx:if="{{item.rating.average==0}}">暂无评分</text>
+      <view wx:else>
+        <block wx:for="{{item.rating.starList}}" wx:for-item="sItem">
+          <text class="red" wx:if="{{sItem>0}}">★</text>
+          <text class="grey" wx:else>★</text>
+        </block>
+        <text>{{item.rating.average}}</text>
+      </view>
+    </navigator>
+  </scroll-view>
+</view>
+<view class="section">
+  <view class="top">
+    <view class="title">吐血推荐</view>
+    <navigator url="/pages/list/list?tag=top250">更多</navigator>
+  </view>
+  <scroll-view scroll-x>
+    <navigator class="item" url="/pages/detail/detail?id={{item.id}}" wx:for="{{top250}}" wx:key="{{item.id}}">
+      <image src="{{item.images.small}}" />
+      <text class="titel">{{item.title}}</text>
+      <text wx:if="{{item.rating.average==0}}">暂无评分</text>
+      <view wx:else>
+        <block wx:for="{{item.rating.starList}}" wx:for-item="sItem">
+          <text class="red" wx:if="{{sItem>0}}">★</text>
+          <text class="grey" wx:else>★</text>
+        </block>
+        <text>{{item.rating.average}}</text>
+      </view>
+    </navigator>
+  </scroll-view>
+</view>

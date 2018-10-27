@@ -1,0 +1,4 @@
+scroll-view {
+    overflow: hidden;
+    white-space: nowrap
+}

@@ -1,0 +1,222 @@
+.content {
+    padding: 0 37rpx;
+}
+
+.content .titel {
+    padding: 70rpx 0 30rpx;
+    font-size: 42rpx;
+    font-weight: 500;
+}
+
+.movie {
+    display: flex;
+}
+
+.movie .left .count {
+    color: #ccc
+}
+
+.movie .left .topp {
+    display: flex;
+    font-size: 30rpx;
+}
+
+.movie .left .bottom {
+    font-size: 30rpx;
+    color: #808080
+}
+
+.movie .right image {
+    width: 200rpx;
+    height: 280rpx;
+}
+
+.movie .left .topp .star-box image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.movie .left .topp .average {
+    padding-right: 32rpx;
+    padding-left: 10rpx
+}
+
+.content .watch {
+    display: flex;
+    margin-top: 60rpx;
+    height: 60rpx;
+}
+
+.content .watch>view {
+    border: 2rpx solid #ffcf61;
+    color: #ffcf61;
+    width: 326rpx;
+    height: 100%;
+    font-size: 32rpx;
+    text-align: center;
+    line-height: 60rpx;
+    margin-right: 20rpx;
+}
+
+.content .channel {
+    margin-top: 68rpx;
+}
+
+.content .channel .title {
+    color: #d2d2d2;
+    font-size: 42rpx;
+    margin-bottom: 34rpx;
+}
+
+.content .channel .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .channel .list .channel-box {
+    color: #05b512;
+    border: 2rpx solid #05b512;
+    border-radius: 27rpx;
+    height: 54rpx;
+    font-size: 28rpx;
+    margin-right: 20rpx;
+    padding: 0 30rpx;
+    line-height: 54rpx;
+    margin-bottom: 30rpx;
+    background-color: #effaf0;
+}
+
+.content .story .title {
+    color: #d2d2d2;
+    font-size: 42rpx;
+    margin-bottom: 34rpx;
+}
+
+.content .story .story-box {
+    font-size: 30rpx;
+    color: black;
+}
+
+.content .story .story-box .more,
+.content .story .story-box .cat {
+    color: #05b512
+}
+
+.content .worker {
+    margin-top: 50rpx;
+    margin-bottom: 75rpx;
+}
+
+.content .title {
+
+    color: #d2d2d2;
+    font-size: 42rpx;
+    margin-bottom: 34rpx;
+}
+
+.content .worker-box {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    margin-top: 30rpx;
+}
+
+.content .worker-box view {
+    display: inline-block;
+    padding-left: 20rpx;
+}
+
+.content .worker-box view image {
+    width: 150rpx;
+    height: 214rpx;
+
+}
+
+.content .worker-box view .name {
+    margin-top: 15rpx;
+    display: block;
+    font-size: 28rpx;
+    text-align: center;
+}
+
+.content .worker-box view .job {
+    text-align: center;
+    margin-top: 18rpx;
+    font-size: 28rpx;
+    display: block;
+    color: #ccc;
+}
+
+.content .trailers .title {
+    font-size: 30rpx;
+}
+
+.content .trailers {
+    margin-bottom: 32rpx;
+}
+
+.content .trailers .trailers-box {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    margin-top: 30rpx;
+}
+
+.content .trailers .trailers-box image {
+    width: 427rpx;
+    height: 242rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+}
+
+.content .comments .comments-box {
+    margin-top: 32rpx;
+    display: flex;
+}
+
+.content .comments .left {
+    width: 120rpx;
+}
+
+.content .comments .left image {
+    width: 74rpx;
+    height: 74rpx;
+    border-radius: 50%;
+}
+
+.content .comments .right {
+    flex: 1;
+    margin-left: 10rpx;
+}
+
+.content .comments .right .top {
+    height: 30rpx;
+    margin-bottom: 15rpx;
+    display: flex;
+
+}
+
+.content .comments .right .top .name {
+    font-size: 30rpx;
+    font-weight: 700;
+}
+
+.content .comments .right .time {
+    margin-left: 20rpx;
+    color: #ccc;
+    font-size: 25rpx;
+    margin-bottom: 20rpx;
+    display: block;
+}
+
+.content .comments .right .content {
+    font-size: 30rpx;
+
+}
+.content .comments .right .star-box{
+    flex: 1;
+}
+.content .comments .right .star-box image{
+    width: 30rpx;
+    height: 30rpx;
+}

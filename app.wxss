@@ -1,0 +1,116 @@
+.nav-box {
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  border-bottom: 2rpx solid #ccc;
+  background-color: #fff;
+  align-items: center;
+  padding: 0 20rpx;
+
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.nav-box>view>navigator icon {
+  padding-right: 20rpx;
+}
+
+.nav-box>navigator {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #05b512;
+}
+
+.nav-box .right {
+  display: flex;
+}
+
+.nav-box .right>navigator {
+  display: block;
+  font-size: 30rpx;
+  /* font-weight: 700; */
+  padding: 0 16rpx;
+}
+
+.nav-box .right>navigator:first-child {
+  color: darkcyan
+}
+
+.nav-box .right>navigator:nth-of-type(2) {
+  color: chocolate
+}
+
+.nav-box .right>navigator:nth-of-type(3) {
+  color: hotpink
+}
+
+.nav-box .right>navigator:last-child {
+  color: skyblue
+}
+
+page {
+  margin-top: 100rpx
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  height: 100rpx;
+  font-size: 40rpx;
+}
+
+.top navigator {
+  font-size: 30rpx;
+  color: #05b512
+}
+
+
+.item {
+  display: inline-block;
+  width: 200rpx;
+  padding-right: 12rpx;
+  text-align: center;
+  height: 360rpx;
+}
+
+.item:first-child {
+  padding-left: 35rpx;
+}
+
+.item:last-child {
+  padding-right: 35rpx;
+}
+
+.item>image {
+  width: 100%;
+  display: block;
+  height: 240rpx;
+}
+
+.red {
+  color: red
+}
+
+.grey {
+  color: grey
+}
+
+
+.item text {
+  font-size: 20rpx;
+}
+
+.item>.titel {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 28rpx;
+  display: block;
+}
